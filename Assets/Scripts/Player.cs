@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Ghost")
         {
+            Camera.main.transform.parent = null;
             Destroy(other.gameObject);
             Instantiate(awakenPlayerPrefab, transform.position,Quaternion.identity);
             Destroy(gameObject);

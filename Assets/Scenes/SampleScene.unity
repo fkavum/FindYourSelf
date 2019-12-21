@@ -234,9 +234,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGhostCanMove: 1
-  isPlayerCanMove: 1
+  isPlayerCanMove: 0
   isInGhostMode: 0
-  isGridMoves: 0
+  isGridMovesForPlayer: 0
+  isGridMovesForGhost: 1
   board: {fileID: 1479917401}
 --- !u!114 &1080254114
 MonoBehaviour:
@@ -305,8 +306,11 @@ MonoBehaviour:
   ghostPrefab: {fileID: 1856637991489947523, guid: 89823f6365d7205408dbde3088ee3c50,
     type: 3}
   FindMovablePlacePos: {x: 0, y: 0, z: 0}
+  isStartWithGhostMode: 0
   width: 5
   height: 5
+  m_player: {fileID: 0}
+  m_ghost: {fileID: 0}
   startingObjects:
   - tileEntityPrefab: {fileID: 1856637991489947523, guid: 63737480af97fc14cbd9a18bf31a0026,
       type: 3}

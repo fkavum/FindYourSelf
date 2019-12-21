@@ -10,15 +10,18 @@ public class Board : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject ghostPrefab;
     public Vector3 FindMovablePlacePos;
-
+    public bool isStartWithGhostMode = false;
     public int width;
     public int height;
 
     private Tile[,] m_allTiles;
     private TileEntity[,] m_allTileObjects;
     private TileEntity[,] m_allTileObjectsSoul;
-    private Player m_player;
-    private Ghost m_ghost;
+    
+    [HideInInspector]
+    public Player m_player;
+    [HideInInspector]
+    public Ghost m_ghost;
 
     public StartingObject[] startingObjects;
 
@@ -44,12 +47,13 @@ public class Board : MonoBehaviour
         m_allTiles = new Tile[width, height];
         m_allTileObjects = new TileEntity[width, height];
         m_allTileObjectsSoul = new TileEntity[width, height];
-
+        LevelManager.Instance.isInGhostMode = isStartWithGhostMode;
         // sets up any manually placed Tiles
         SetupTiles();
         SetupTileEntities();
         ChangeGridMode();
         InitPlayer();
+        LevelManager.Instance.SetupCameraMechanics();
     }
 
     private void Update()
@@ -187,16 +191,22 @@ public class Board : MonoBehaviour
         }
     }
 
-    public void MovePlayers(Vector2 dir)
+    public void MovePlayers(Vector2 playerDir)
     {
         if (!InputManager.Instance.isMoveInputEnabled || m_ghost.isMoving || m_player.isMoving )
         {
             return;
         }
 
+
+        if (LevelManager.Instance.isInGhostMode)
+        {
+            playerDir = playerDir * -1f;
+        }
+        
         if (LevelManager.Instance.isPlayerCanMove)
         {
-            Tile playerTile = MovablePlaceAtWithDirection(m_player.x, m_player.y, dir);
+            Tile playerTile = MovablePlaceAtWithDirection(m_player.x, m_player.y, playerDir);
             if (playerTile != null)
             {
                 m_player.MovePlayer(playerTile.xIndex,playerTile.yIndex);
@@ -204,7 +214,7 @@ public class Board : MonoBehaviour
         }
         if (LevelManager.Instance.isGhostCanMove)
         {
-            Tile playerTile = MovablePlaceAtWithDirection(m_ghost.x, m_ghost.y, dir*-1f);
+            Tile playerTile = MovablePlaceAtWithDirection(m_ghost.x, m_ghost.y, playerDir*-1f);
             if (playerTile != null)
             {
                 m_ghost.MovePlayer(playerTile.xIndex,playerTile.yIndex);
