@@ -16,6 +16,11 @@
           <e p="Singleton.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="TileEntity.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="CanvasTest.cs" t="Include" />
+            <e p="MainMenuCanvas.cs" t="Include" />
+            <e p="SelectLevelCanvas.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="gridIt.sln" t="IncludeFlat" />
