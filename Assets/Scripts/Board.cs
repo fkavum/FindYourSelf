@@ -11,9 +11,14 @@ public class Board : MonoBehaviour
     public GameObject ghostPrefab;
     public Vector3 FindMovablePlacePos;
     public bool isStartWithGhostMode = false;
+
+    public Vector2 playerStartingPosition = new Vector2(0f,0f);
+    public Vector2 soulStartingPosition = new Vector2(1f,1f);
+    
+    
     public int width;
     public int height;
-
+    
     private Tile[,] m_allTiles;
     private TileEntity[,] m_allTileObjects;
     private TileEntity[,] m_allTileObjectsSoul;
@@ -161,17 +166,17 @@ public class Board : MonoBehaviour
 
     void InitPlayer()
     {
-        GameObject playerObj = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        GameObject playerObj = Instantiate(playerPrefab, new Vector3((int) playerStartingPosition.x, (int) playerStartingPosition.y, 0), Quaternion.identity) as GameObject;
         playerObj.name = "Player";
         m_player = playerObj.GetComponent<Player>();
-        m_player.Init(0, 0);
+        m_player.Init((int) playerStartingPosition.x, (int) playerStartingPosition.y);
 
 
         GameObject ghostObj =
-            Instantiate(ghostPrefab, new Vector3(width - 1, height - 1, 0), Quaternion.identity) as GameObject;
+            Instantiate(ghostPrefab, new Vector3((int) soulStartingPosition.x, (int) soulStartingPosition.y, 0), Quaternion.identity) as GameObject;
         ghostObj.name = "Ghost";
         m_ghost = ghostObj.GetComponent<Ghost>();
-        m_ghost.Init(width - 1, height - 1);
+        m_ghost.Init((int) soulStartingPosition.x, (int) soulStartingPosition.y);
     }
 
     void MakeTile(GameObject prefab, int x, int y, int z = 0)
@@ -209,7 +214,7 @@ public class Board : MonoBehaviour
             Tile playerTile = MovablePlaceAtWithDirection(m_player.x, m_player.y, playerDir);
             if (playerTile != null)
             {
-                m_player.MovePlayer(playerTile.xIndex,playerTile.yIndex);
+                m_player.MovePlayer(playerTile.xIndex,playerTile.yIndex,playerDir);
             }
         }
         if (LevelManager.Instance.isGhostCanMove)
@@ -328,6 +333,16 @@ public class Board : MonoBehaviour
 
     public void ChangeGridMode()
     {
+    
+        if (LevelManager.Instance.isInGhostMode)
+        {
+            SoundManager.Instance.PlayGhostGridBgMusic();
+        }
+        else
+        {
+            SoundManager.Instance.PlayPlayerGridBgMusic();
+        }
+        
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)

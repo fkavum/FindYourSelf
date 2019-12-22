@@ -10,6 +10,10 @@ public class MainMenuCanvas : MonoBehaviour
     // Start is called before the first frame update
     public void StartGameButton()
     {
+        SceneManager.LoadScene("Level1");
+    }
+    public void SelectLevelButton()
+    {
         SceneManager.LoadScene("SelectLevel");
     }
     
