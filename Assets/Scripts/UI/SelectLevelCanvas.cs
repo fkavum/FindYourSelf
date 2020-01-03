@@ -82,4 +82,28 @@ public class SelectLevelCanvas : MonoBehaviour
     {
         SceneManager.LoadScene("Level8");
     }
+    public void SelectLevel9Button()
+    {
+        SceneManager.LoadScene("Level9");
+    }
+    public void SelectLevel10Button()
+    {
+        SceneManager.LoadScene("Level10");
+    }
+    public void SelectLevel11Button()
+    {
+        SceneManager.LoadScene("Level11");
+    }
+    public void SelectLevel12Button()
+    {
+        SceneManager.LoadScene("Level12");
+    }
+    public void SelectLevel13Button()
+    {
+        SceneManager.LoadScene("Level13");
+    }
+    public void SelectLevel14Button()
+    {
+        SceneManager.LoadScene("Level14");
+    }
 }

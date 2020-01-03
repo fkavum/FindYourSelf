@@ -556,6 +556,14 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 613781500, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1080254114}
+    - target: {fileID: 613781500, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
 --- !u!1 &1262602006 stripped
@@ -606,7 +614,6 @@ MonoBehaviour:
   ghostPrefab: {fileID: 1856637991489947523, guid: 89823f6365d7205408dbde3088ee3c50,
     type: 3}
   FindMovablePlacePos: {x: 0, y: 0, z: 0}
-  isStartWithGhostMode: 0
   playerStartingPosition: {x: 0, y: 0}
   soulStartingPosition: {x: 4, y: 4}
   width: 5

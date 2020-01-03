@@ -311,7 +311,6 @@ MonoBehaviour:
   ghostPrefab: {fileID: 1856637991489947523, guid: 89823f6365d7205408dbde3088ee3c50,
     type: 3}
   FindMovablePlacePos: {x: 0, y: 0, z: 0}
-  isStartWithGhostMode: 0
   playerStartingPosition: {x: 0, y: 0}
   soulStartingPosition: {x: 4, y: 4}
   width: 5
@@ -325,7 +324,7 @@ MonoBehaviour:
       type: 3}
     x: 0
     y: 0
-  - tileEntityPrefab: {fileID: 1906981690270980938, guid: 4cdc68ca267d8ee49999a4161017f997,
+  - tileEntityPrefab: {fileID: 2772204330873669968, guid: a11a74f4a73231e45a5e09b5b215f895,
       type: 3}
     tileEntityPrefabSoul: {fileID: 2758760769829811522, guid: d59d5db0aab7f694a89b25ef314e1b3e,
       type: 3}
@@ -385,7 +384,7 @@ MonoBehaviour:
       type: 3}
     x: 0
     y: 2
-  - tileEntityPrefab: {fileID: 1906981690270980938, guid: 4cdc68ca267d8ee49999a4161017f997,
+  - tileEntityPrefab: {fileID: 2772204330873669968, guid: a11a74f4a73231e45a5e09b5b215f895,
       type: 3}
     tileEntityPrefabSoul: {fileID: 2758760769829811522, guid: d59d5db0aab7f694a89b25ef314e1b3e,
       type: 3}
@@ -415,7 +414,7 @@ MonoBehaviour:
       type: 3}
     x: 0
     y: 3
-  - tileEntityPrefab: {fileID: 7086216654715769737, guid: 912a0488ba047304e9d8706b6baa3783,
+  - tileEntityPrefab: {fileID: 2772204330873669968, guid: a11a74f4a73231e45a5e09b5b215f895,
       type: 3}
     tileEntityPrefabSoul: {fileID: 3730135160526677598, guid: 53e99174b8f69da48ad7c67b57d1c7fa,
       type: 3}
@@ -427,7 +426,7 @@ MonoBehaviour:
       type: 3}
     x: 2
     y: 3
-  - tileEntityPrefab: {fileID: 7086216654715769737, guid: 912a0488ba047304e9d8706b6baa3783,
+  - tileEntityPrefab: {fileID: 2772204330873669968, guid: a11a74f4a73231e45a5e09b5b215f895,
       type: 3}
     tileEntityPrefabSoul: {fileID: 3730135160526677598, guid: 53e99174b8f69da48ad7c67b57d1c7fa,
       type: 3}

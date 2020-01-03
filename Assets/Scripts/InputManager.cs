@@ -58,13 +58,16 @@ public class InputManager : Singleton<InputManager>
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-        PauseGame();
-            
+            if(!LevelManager.Instance.isGameEnded){
+                PauseGame();
+            }
         }
     }
 
+    // TODO: MOVE IT TO THE UI CANVAS
     public void PauseGame()
     {
+        if(LevelManager.Instance.isGameEnded) return;
         if (pauseMenuPanel.active)
         {
             pauseMenuPanel.SetActive(false);

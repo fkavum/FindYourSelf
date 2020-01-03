@@ -10,7 +10,6 @@ public class Board : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject ghostPrefab;
     public Vector3 FindMovablePlacePos;
-    public bool isStartWithGhostMode = false;
 
     public Vector2 playerStartingPosition = new Vector2(0f,0f);
     public Vector2 soulStartingPosition = new Vector2(1f,1f);
@@ -52,7 +51,6 @@ public class Board : MonoBehaviour
         m_allTiles = new Tile[width, height];
         m_allTileObjects = new TileEntity[width, height];
         m_allTileObjectsSoul = new TileEntity[width, height];
-        LevelManager.Instance.isInGhostMode = isStartWithGhostMode;
         // sets up any manually placed Tiles
         SetupTiles();
         SetupTileEntities();
