@@ -1,0 +1,19 @@
+HEADER1
+
+BedenHareket;
+RuhHareket;
+StartingInGhostMode;
+GridMoves;
+OneStarMove;
+TwoStarMove;
+ThreeStarMovee;
+
+HEADER2
+
+BEDENCOORD; SeperateWith "-"
+RUHCOORD; SepereteWith "-"
+GridDimension; SeperateWith "-"
+
+GRID;
+
+O1,R1

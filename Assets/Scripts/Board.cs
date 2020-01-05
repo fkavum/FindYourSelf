@@ -28,6 +28,7 @@ public class Board : MonoBehaviour
     public Ghost m_ghost;
 
     public StartingObject[] startingObjects;
+    private BoardGenerator m_boardGenerator;
 
     [System.Serializable]
     public class StartingObject
@@ -48,6 +49,10 @@ public class Board : MonoBehaviour
 
     void Start()
     {
+
+        m_boardGenerator = gameObject.GetComponent<BoardGenerator>();
+        m_boardGenerator.ParseCsv();
+        m_boardGenerator.SetVariables(this);
         m_allTiles = new Tile[width, height];
         m_allTileObjects = new TileEntity[width, height];
         m_allTileObjectsSoul = new TileEntity[width, height];

@@ -469,6 +469,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 613781500, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1080254114}
+    - target: {fileID: 613781500, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
     - target: {fileID: 4020166367000499786, guid: 9a37ef2ed724f9d40a733c86daca46f5,
         type: 3}
       propertyPath: m_UiScaleMode
@@ -483,14 +491,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 613781500, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1080254114}
-    - target: {fileID: 613781500, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a37ef2ed724f9d40a733c86daca46f5, type: 3}
@@ -588,6 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479917402}
   - component: {fileID: 1479917401}
+  - component: {fileID: 1479917403}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -929,6 +930,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1479917403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479917400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e7de9da1e62754e859cd215594da20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  csvLevel: {fileID: 4900000, guid: 752c6b644fad9154aa02556a2805ac0f, type: 3}
+  O1Normal: {fileID: 1772292878806241568, guid: 1b68d42c676db884c977051dc4367a86,
+    type: 3}
+  O1Soul: {fileID: 7680043869238574911, guid: cc8542562f1e01944a61b769f5c7c276, type: 3}
+  R1Normal: {fileID: 2772204330873669968, guid: a11a74f4a73231e45a5e09b5b215f895,
+    type: 3}
+  R1Soul: {fileID: 4380025439395912352, guid: 7793f1601a389034094b3ce4ce10961e, type: 3}
 --- !u!1 &1620387402
 GameObject:
   m_ObjectHideFlags: 0
