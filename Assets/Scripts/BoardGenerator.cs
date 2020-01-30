@@ -60,6 +60,10 @@ public class BoardGenerator : MonoBehaviour
         LevelManager.Instance.isPlayerCanMove = isPlayerCanMove;
         LevelManager.Instance.isGridMovesForPlayer = isGridMovesForPlayer;
         LevelManager.Instance.isGridMovesForGhost = isGridMovesForGhost;
+
+        LevelManager.Instance.oneStarMove = oneStarMove;
+        LevelManager.Instance.twoStarMove = twoStarMove;
+        LevelManager.Instance.threeStarMove = threeStarMove;
     }
 
     private void ParseHeader1(string s)

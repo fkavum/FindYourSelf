@@ -264,6 +264,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c371eb225168ff468e5152418b21119, type: 3}
+--- !u!114 &239568102 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2743521284543521092, guid: 6c371eb225168ff468e5152418b21119,
+    type: 3}
+  m_PrefabInstance: {fileID: 239568101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44266d7a968c46439cd10b39b56c9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &492680776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423,6 +435,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 492680776}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &492680779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4020166367000499789, guid: 9a37ef2ed724f9d40a733c86daca46f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 492680776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5f83d270e748c44a478906ba921dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,15 +561,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 2
-  moveCount: 0
   isGhostCanMove: 1
   isPlayerCanMove: 0
+  oneStarMove: 0
+  twoStarMove: 0
+  threeStarMove: 0
   isInGhostMode: 0
   isGridMovesForPlayer: 0
   isGridMovesForGhost: 0
   board: {fileID: 1479917401}
   isGameEnded: 0
   winMenu: {fileID: 492680778}
+  LevelBgCanvas: {fileID: 239568102}
+  levelCanvas: {fileID: 492680779}
 --- !u!114 &1080254114
 MonoBehaviour:
   m_ObjectHideFlags: 0

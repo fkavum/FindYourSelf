@@ -234,15 +234,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 1
-  moveCount: 0
   isGhostCanMove: 0
   isPlayerCanMove: 1
+  oneStarMove: 0
+  twoStarMove: 0
+  threeStarMove: 0
   isInGhostMode: 0
   isGridMovesForPlayer: 0
   isGridMovesForGhost: 0
   board: {fileID: 1479917401}
   isGameEnded: 0
   winMenu: {fileID: 2037454205}
+  LevelBgCanvas: {fileID: 201388875670741966}
+  levelCanvas: {fileID: 1268005919}
 --- !u!114 &1080254114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +279,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1268005919 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4020166367000499789, guid: 9a37ef2ed724f9d40a733c86daca46f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4020166365762972912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5f83d270e748c44a478906ba921dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1479917400
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +485,6 @@ MonoBehaviour:
       type: 3}
     x: 4
     y: 4
-  BoardGenerator: {fileID: 1479917403}
 --- !u!4 &1479917402
 Transform:
   m_ObjectHideFlags: 0
@@ -753,6 +768,18 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c371eb225168ff468e5152418b21119, type: 3}
+--- !u!114 &201388875670741966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2743521284543521092, guid: 6c371eb225168ff468e5152418b21119,
+    type: 3}
+  m_PrefabInstance: {fileID: 201388875670741965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44266d7a968c46439cd10b39b56c9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4020166365762972912
 PrefabInstance:
   m_ObjectHideFlags: 0

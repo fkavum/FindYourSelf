@@ -347,6 +347,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c371eb225168ff468e5152418b21119, type: 3}
+--- !u!114 &533840597 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2743521284543521092, guid: 6c371eb225168ff468e5152418b21119,
+    type: 3}
+  m_PrefabInstance: {fileID: 533840596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44266d7a968c46439cd10b39b56c9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1080254112
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,15 +390,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 4
-  moveCount: 0
   isGhostCanMove: 0
   isPlayerCanMove: 1
+  oneStarMove: 0
+  twoStarMove: 0
+  threeStarMove: 0
   isInGhostMode: 0
   isGridMovesForPlayer: 1
   isGridMovesForGhost: 0
   board: {fileID: 1479917401}
   isGameEnded: 0
   winMenu: {fileID: 1262602007}
+  LevelBgCanvas: {fileID: 533840597}
+  levelCanvas: {fileID: 1262602008}
 --- !u!114 &1080254114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +594,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1262602005}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1262602008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4020166367000499789, guid: 9a37ef2ed724f9d40a733c86daca46f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1262602005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5f83d270e748c44a478906ba921dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1479917400
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e7de9da1e62754e859cd215594da20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  csvLevel: {fileID: 4900000, guid: 128c75690847dd04fb9362381a31735c, type: 3}
+  csvLevel: {fileID: 4900000, guid: 3525f6cebc3005742a8f126b76112994, type: 3}
   O1Normal: {fileID: 1772292878806241568, guid: 1b68d42c676db884c977051dc4367a86,
     type: 3}
   O1Soul: {fileID: 7680043869238574911, guid: cc8542562f1e01944a61b769f5c7c276, type: 3}

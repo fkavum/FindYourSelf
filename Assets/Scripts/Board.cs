@@ -211,7 +211,7 @@ public class Board : MonoBehaviour
         {
             playerDir = playerDir * -1f;
         }
-        
+        LevelManager.Instance.UpdateMovesDoneCounters();
         if (LevelManager.Instance.isPlayerCanMove)
         {
             Tile playerTile = MovablePlaceAtWithDirection(m_player.x, m_player.y, playerDir);
