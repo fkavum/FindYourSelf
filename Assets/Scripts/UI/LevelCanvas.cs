@@ -9,11 +9,21 @@ public class LevelCanvas : MonoBehaviour
 
     public GameObject pauseMenuPanel;
 
+    public GameObject[] stars;
+    
     // Start is called before the first frame update
     public void NextLevelButton()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Level" + GameManager.Instance.nextLevel.ToString());
+    }
+
+    public void ActivateStars(int starCount)
+    {
+        for (int i = 0; i < starCount; i++)
+        {
+            stars[i].SetActive(true);
+        }
     }
 
     public void OptionsOpenButton()
