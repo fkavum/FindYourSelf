@@ -7,12 +7,12 @@ public class InputManager : Singleton<InputManager>
 {
     public GameObject pauseMenuPanel;
     public bool isMoveInputEnabled = true;
+    public bool canGoNextLevel = false;
 
     public bool right = false;
     public bool left = false;
     public bool up = false;
     public bool down = false;
-
     private void Update()
     {
         if (isMoveInputEnabled)
@@ -62,13 +62,21 @@ public class InputManager : Singleton<InputManager>
                 PauseGame();
             }
         }
+
+        if (canGoNextLevel)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                LevelManager.Instance.GoNextLevel();
+            }
+        }
     }
 
     // TODO: MOVE IT TO THE UI CANVAS
     public void PauseGame()
     {
         if(LevelManager.Instance.isGameEnded) return;
-        if (pauseMenuPanel.active)
+        if (pauseMenuPanel.activeInHierarchy)
         {
             pauseMenuPanel.SetActive(false);
             Time.timeScale = 1f;

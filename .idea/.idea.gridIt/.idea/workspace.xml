@@ -2,38 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45402996-93b8-43c9-bc86-926c253e3640" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.gridIt/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gridIt/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.gridIt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gridIt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelBgCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelBgCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/OptionsMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/OptionsMenu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/levelBoard1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/levelBoard1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/levelBoard12.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/levelBoard12.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/levelBoard3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/levelBoard3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/levelBoard4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/levelBoard4.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/levelBoardInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/levelBoardInfo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level10.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level11.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level12.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level13.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level13.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level14.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level14.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level15.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level15.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level16.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level16.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level17.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level17.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level9.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SelectLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoardGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BoardGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LevelCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LevelCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectLevelCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SelectLevelCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ghost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LevelCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelBgCanvas.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Level1.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,13 +70,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Ghost.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DDOL/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCanvas.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SelectLevelCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/LevelBgCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BoardGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LevelCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
       </list>
     </option>
@@ -148,7 +139,8 @@
       <workItem from="1578082618805" duration="2509000" />
       <workItem from="1578216364006" duration="3431000" />
       <workItem from="1578321881399" duration="4067000" />
-      <workItem from="1580392050627" duration="547000" />
+      <workItem from="1580392050627" duration="1533000" />
+      <workItem from="1580561409718" duration="4196000" />
     </task>
     <servers />
   </component>
@@ -158,15 +150,15 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="WindowStateProjectService">
-    <state x="-1282" y="252" width="644" height="536" key="find.popup" timestamp="1578051928710">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="638" y="252" width="644" height="536" key="find.popup" timestamp="1580563490231">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1282" y="252" width="644" height="536" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1578051928710" />
-    <state x="638" y="252" width="644" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577015528039" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1578051914887">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="638" y="252" width="644" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580563490231" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580563468197">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1578051914887" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576907170865" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580563468197" />
   </component>
 </project>

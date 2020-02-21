@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : Singleton<LevelManager>
 {
@@ -32,19 +32,18 @@ public class LevelManager : Singleton<LevelManager>
         GameManager.Instance.nextLevel = currentLevel + 1;
         currentMovesDone = 0;
         LevelBgCanvas.SetMovesDone(currentMovesDone);
+        InputManager.Instance.canGoNextLevel = false;
     }
 
-    private void Update()
+
+    public void EndGame()
     {
-        if (isGameEnded)
+        int stars = CalculateStars();
+        levelCanvas.ActivateStars(stars);
+        StartCoroutine(waitForWin());
+        if (currentLevel >= GameManager.Instance.lastOpenLevel)
         {
-            int stars = CalculateStars();
-            levelCanvas.ActivateStars(stars);
-            StartCoroutine(waitForWin());
-            if (currentLevel >= GameManager.Instance.lastOpenLevel)
-            {
-                GameManager.Instance.lastOpenLevel = currentLevel + 1;
-            }
+            GameManager.Instance.lastOpenLevel = currentLevel + 1;
         }
     }
 
@@ -68,6 +67,12 @@ public class LevelManager : Singleton<LevelManager>
         return 0;
     }
 
+    public void GoNextLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level" + GameManager.Instance.nextLevel.ToString());
+    }
+
     public void UpdateMovesDoneCounters()
     {
         currentMovesDone++;
@@ -76,7 +81,8 @@ public class LevelManager : Singleton<LevelManager>
 
     IEnumerator waitForWin()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
+        InputManager.Instance.canGoNextLevel = true;
         winMenu.SetActive(true);
 
     }
