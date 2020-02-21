@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +27,7 @@ public class Player : MonoBehaviour
             Instantiate(awakenPlayerPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
             LevelManager.Instance.isGameEnded = true;
+            LevelManager.Instance.EndGame();
             SoundManager.Instance.PlayAwakenGridBgMusic();
         }
     }

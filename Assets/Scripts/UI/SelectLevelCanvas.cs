@@ -14,6 +14,11 @@ public class SelectLevelCanvas : MonoBehaviour
 
     public void Start()
     {
+      SetLevelButtonsActive();
+    }
+
+    private void SetLevelButtonsActive()
+    {
         int levelIndex = 1;
         foreach (Button levelButton in levelButtons)
         {
@@ -106,4 +111,36 @@ public class SelectLevelCanvas : MonoBehaviour
     {
         SceneManager.LoadScene("Level14");
     }
+    public void SelectLevel15Button()
+    {
+        SceneManager.LoadScene("Level15");
+    }
+    public void SelectLevel16Button()
+    {
+        SceneManager.LoadScene("Level16");
+    }
+    public void SelectLevel17Button()
+    {
+        SceneManager.LoadScene("Level17");
+    }
+    public void SelectLevel18Button()
+    {
+        SceneManager.LoadScene("Level18");
+    }
+    public void SelectLevel19Button()
+    {
+        SceneManager.LoadScene("Level19");
+    }
+    
+    public void SelectLevel20Button()
+    {
+        SceneManager.LoadScene("Level20");
+    }
+
+    public void HackMe()
+    {
+        GameManager.Instance.lastOpenLevel = 99;
+        SetLevelButtonsActive();
+    }
+    
 }
