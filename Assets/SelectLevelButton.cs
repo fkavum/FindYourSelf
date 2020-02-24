@@ -46,13 +46,13 @@ public class SelectLevelButton : MonoBehaviour
                     break;
                 case 2:
                     star1.SetActive(true);
-                    star2.SetActive(false);
+                    star2.SetActive(true);
                     star3.SetActive(false);
                     break;
                 case 3:
                     star1.SetActive(true);
-                    star2.SetActive(false);
-                    star3.SetActive(false);
+                    star2.SetActive(true);
+                    star3.SetActive(true);
                     break;
             }
 

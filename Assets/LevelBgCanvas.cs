@@ -12,7 +12,8 @@ public class LevelBgCanvas : MonoBehaviour
     
     void Start()
     {
-        levelInfoText.text = SceneManager.GetActiveScene().name;
+        //levelInfoText.text = SceneManager.GetActiveScene().name;
+        levelInfoText.text = "Level " + LevelManager.Instance.currentLevel.ToString();
     }
 
     public void SetMovesDone(int movesDone)

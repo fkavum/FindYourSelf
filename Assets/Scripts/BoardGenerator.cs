@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BoardGenerator : MonoBehaviour
 {
-    public TextAsset csvLevel;
+    private TextAsset csvLevel;
 
     public GameObject O1Normal;
     public GameObject O1Soul;
@@ -33,8 +33,21 @@ public class BoardGenerator : MonoBehaviour
     private Vector2 playerStartingPos;
     private Vector2 soulStartingPos;
 
+    private void Start()
+    {
+        string textName = "levelBoard" + LevelManager.Instance.currentLevel.ToString();
+        csvLevel = Resources.Load<TextAsset>(textName);
+    }
+
+    private void ManualStart()
+    {
+        string textName = "levelBoard" + LevelManager.Instance.currentLevel.ToString();
+        csvLevel = Resources.Load<TextAsset>(textName);
+    }
+
     public void ParseCsv()
     {
+        ManualStart();
         startingObjects = new List<Board.StartingObject>();
         string[] csvString = csvLevel.text.Split("\n"[0]);
         for (int i = 0; i < csvString.Length ; i++)
