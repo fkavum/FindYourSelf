@@ -25,6 +25,7 @@ public class LevelManager : Singleton<LevelManager>
 
     public bool isGameEnded = false;
     public GameObject winMenu;
+    public GameObject loseMenu;
     public LevelBgCanvas LevelBgCanvas;
     public LevelCanvas levelCanvas;
     private void Start()
@@ -40,10 +41,14 @@ public class LevelManager : Singleton<LevelManager>
     {
         int stars = CalculateStars();
         levelCanvas.ActivateStars(stars);
+        string playerPref = "level" + currentLevel.ToString() + "Star";
+        PlayerPrefs.SetInt(playerPref, stars);
+
         StartCoroutine(waitForWin());
         if (currentLevel >= GameManager.Instance.lastOpenLevel)
         {
             GameManager.Instance.lastOpenLevel = currentLevel + 1;
+            PlayerPrefs.SetInt("lastOpenLevel", currentLevel + 1);
         }
     }
 
@@ -71,6 +76,12 @@ public class LevelManager : Singleton<LevelManager>
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Level" + GameManager.Instance.nextLevel.ToString());
+    }
+
+    internal void LoseGame()
+    {
+        InputManager.Instance.isMoveInputEnabled = false;
+        loseMenu.SetActive(true);
     }
 
     public void UpdateMovesDoneCounters()

@@ -30,6 +30,12 @@ public class Player : MonoBehaviour
             LevelManager.Instance.EndGame();
             SoundManager.Instance.PlayAwakenGridBgMusic();
         }
+
+        if (other.gameObject.tag == "MovingObs")
+        {
+            Destroy(gameObject);
+            LevelManager.Instance.LoseGame();
+        }
     }
 
     public void MovePlayer(int x, int y, Vector2 dir)
@@ -47,6 +53,7 @@ public class Player : MonoBehaviour
 
     void AnimateWalk(Vector2 dir)
     {
+        if (m_animator == null) return;
         if (dir.y > 0)
         {
             m_animator.SetBool("idle", false);
@@ -74,6 +81,7 @@ public class Player : MonoBehaviour
 
     void AnimateIdle()
     {
+        if (m_animator == null) return;
         m_animator.SetBool("walkLeft", false);
         m_animator.SetBool("walkRight", false);
         m_animator.SetBool("walkDown", false);

@@ -68,4 +68,14 @@ public class Ghost : MonoBehaviour
         this.x = x;
         this.y = y;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+    
+        if (other.gameObject.tag == "MovingObs")
+        {
+            Destroy(gameObject);
+            LevelManager.Instance.LoseGame();
+        }
+    }
 }
