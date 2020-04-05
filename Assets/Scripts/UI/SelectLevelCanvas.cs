@@ -10,8 +10,10 @@ public class SelectLevelCanvas : MonoBehaviour
     public GameObject optionsMenuPanel;
 
     public Button[] levelButtons;
-    // Start is called before the first frame update
 
+    [Header("upDownButtons")] public RectTransform selectLevelArea;
+    public float goDistance = 10f;
+    
     public void Start()
     {
       SetLevelButtonsActive();
@@ -39,7 +41,31 @@ public class SelectLevelCanvas : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-    
+
+    public void GoUp()
+    {
+        Vector3 pos =selectLevelArea.anchoredPosition;
+        pos.y -= goDistance;
+        selectLevelArea.anchoredPosition = pos;
+    }
+
+    public void GoDown()
+    {
+        Vector3 pos =selectLevelArea.anchoredPosition;
+        pos.y += goDistance;
+        selectLevelArea.anchoredPosition = pos;
+    }
+
+
+    private void Update()
+    {
+        float number = Input.GetAxis("Mouse ScrollWheel");
+        Vector3 pos =selectLevelArea.anchoredPosition;
+        pos.y -= number*goDistance;
+        selectLevelArea.anchoredPosition = pos;
+    }
+
+
     public void OptionsOpenButton()
     {
         optionsMenuPanel.SetActive(true);

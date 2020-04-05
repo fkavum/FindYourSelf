@@ -12,6 +12,33 @@ public class LevelCanvas : MonoBehaviour
 
     public GameObject[] stars;
 
+
+    [Header("infoPanel")]
+    public GameObject infoPanel;
+    public Text infoPanelText;
+
+
+    public void CloseInfoPanel()
+    {
+        InputManager.Instance.isMoveInputEnabled = true;
+        infoPanel.SetActive(false);
+    }
+
+    public void SetupInfoPanel()
+    {
+        InputManager.Instance.isMoveInputEnabled = false;
+        infoPanelText.text = LevelManager.Instance.tutorialString;
+        infoPanel.SetActive(true);
+    }
+
+    private void Start()
+    {
+        if (LevelManager.Instance.isTutorialText)
+        {
+            SetupInfoPanel();
+        }
+    }
+
     public void NextLevelButton()
     {
         Time.timeScale = 1f;

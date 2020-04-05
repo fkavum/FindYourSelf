@@ -10,18 +10,23 @@ public class MovingObsParams
     public float speed;
     public float delay;
 }
-public class MovingObsManager : MonoBehaviour
+public class MovingObsManager : Singleton<MovingObsManager>
 {
     public GameObject movingObsPrefab;
     public List<MovingObsParams> movingObsParams;
 
+   public List<MovingObs> movingObs;
     public void Start()
     {
+        movingObs = new List<MovingObs>();
+        
         foreach (MovingObsParams prms in movingObsParams)
         {
             GameObject go = Instantiate(movingObsPrefab);
             MovingObs goScritp = go.GetComponent<MovingObs>();
-
+            
+            movingObs.Add(goScritp);
+            
             goScritp.startPos = prms.startPos;
             goScritp.endPos = prms.endPos;
             goScritp.speed = prms.speed;
@@ -31,4 +36,11 @@ public class MovingObsManager : MonoBehaviour
         }
     }
 
+    public void StopAllCorts()
+    {
+        foreach (var obs in movingObs)
+        {
+            obs.StopAllCorts();
+        }
+    }
 }

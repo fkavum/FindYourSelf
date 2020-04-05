@@ -28,6 +28,12 @@ public class LevelManager : Singleton<LevelManager>
     public GameObject loseMenu;
     public LevelBgCanvas LevelBgCanvas;
     public LevelCanvas levelCanvas;
+
+    [Header("TutorialText")]
+    public bool isTutorialText = false;
+    [TextArea]
+    public string tutorialString;
+
     private void Start()
     {
         GameManager.Instance.nextLevel = currentLevel + 1;
@@ -39,6 +45,7 @@ public class LevelManager : Singleton<LevelManager>
 
     public void EndGame()
     {
+        MovingObsManager.Instance.StopAllCorts();
         int stars = CalculateStars();
         levelCanvas.ActivateStars(stars);
         string playerPref = "level" + currentLevel.ToString() + "Star";
@@ -80,6 +87,9 @@ public class LevelManager : Singleton<LevelManager>
 
     internal void LoseGame()
     {
+        if(isGameEnded) return;
+        
+        MovingObsManager.Instance.StopAllCorts();
         InputManager.Instance.isMoveInputEnabled = false;
         loseMenu.SetActive(true);
     }

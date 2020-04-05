@@ -256,6 +256,9 @@ MonoBehaviour:
   loseMenu: {fileID: 395366463}
   LevelBgCanvas: {fileID: 201388875670741966}
   levelCanvas: {fileID: 1268005919}
+  isTutorialText: 1
+  tutorialString: "Congratulations!\r\n\r\nYou have passed to stage 2. \nBut things
+    will get harder. \nDon't touch the moving obstacles!"
 --- !u!114 &1080254114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +315,7 @@ MonoBehaviour:
     endPos: {x: 5, y: 2, z: 0}
     speed: 5
     delay: 0
+  movingObs: []
 --- !u!114 &1268005919 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4020166367000499789, guid: 9a37ef2ed724f9d40a733c86daca46f5,

@@ -26,6 +26,13 @@ public class MainMenuCanvas : MonoBehaviour
     {
         optionsMenuPanel.SetActive(false);
     }
+    
+    
+    public void Cheat()
+    {
+        PlayerPrefs.SetInt("lastOpenLevel", 999);
+        GameManager.Instance.lastOpenLevel = 999;
+    }
 
     public void ExitGameButton()
     {

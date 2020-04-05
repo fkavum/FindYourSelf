@@ -10,12 +10,21 @@ public class MovingObs : MonoBehaviour
 
     public float delay;
 
+    public IEnumerator cort;
     public void Move()
     {
         transform.position = startPos;
-        StartCoroutine(MovePlayerCoroutine());
+        cort = MovePlayerCoroutine();
+        StartCoroutine(cort);
     }
 
+    public void StopAllCorts()
+    {
+        StopAllCoroutines();
+        StopCoroutine(cort);
+    }
+    
+    
     IEnumerator MovePlayerCoroutine()
     {
         while (true)

@@ -306,12 +306,13 @@ MonoBehaviour:
   movingObsParams:
   - startPos: {x: 3, y: 0, z: 0}
     endPos: {x: 3, y: 2, z: 0}
-    speed: 5
+    speed: 4
     delay: 0
   - startPos: {x: 3, y: 6, z: 0}
     endPos: {x: 7, y: 6, z: 0}
     speed: 5
     delay: 0
+  movingObs: []
 --- !u!114 &1268005919 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4020166367000499789, guid: 9a37ef2ed724f9d40a733c86daca46f5,

@@ -308,10 +308,11 @@ MonoBehaviour:
     endPos: {x: 7, y: 2, z: 0}
     speed: 5
     delay: 0
-  - startPos: {x: 0, y: 3, z: 0}
-    endPos: {x: 7, y: 3, z: 0}
+  - startPos: {x: 7, y: 3, z: 0}
+    endPos: {x: 0, y: 3, z: 0}
     speed: 5
-    delay: 0
+    delay: 0.5
+  movingObs: []
 --- !u!114 &1268005919 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4020166367000499789, guid: 9a37ef2ed724f9d40a733c86daca46f5,
